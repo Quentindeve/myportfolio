@@ -18,7 +18,7 @@ Quentindeve / Veille Technologique
             {% for page in section.pages %}
 
             {% if page.extra.category == 1 %}
-            <div class="flex flex-col align-middle">
+            <div class="flex flex-col align-middle mb-2">
                 <a href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
@@ -35,7 +35,7 @@ Quentindeve / Veille Technologique
             {% for page in section.pages %}
 
             {% if page.extra.category == 2 %}
-            <div class="flex flex-col">
+            <div class="flex flex-col mb-2">
                 <a href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
@@ -52,7 +52,7 @@ Quentindeve / Veille Technologique
             {% for page in section.pages %}
 
             {% if page.extra.category == 3 %}
-            <div class="flex flex-col">
+            <div class="flex flex-col mb-2">
                 <a href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
