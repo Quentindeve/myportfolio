@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Quentindeve / Veille Technologique
+{% endblock %}
+
+{% block body %}
+<div class="text-container flex flex-col">
+    <h1>Veille technologique</h1>
+    {{ section.content | safe }}
+
+    <hr class="my-2" />
+
+    <div class="flex flex-row self-center my-0">
+        {# Frameworks #}
+        <div class="flex flex-col self-center mx-16">
+            <h2 class="text-cyberblue">Les outils de développement</h2>
+            {% for page in section.pages %}
+
+            {% if page.extra.category == 1 %}
+            <div class="flex flex-col align-middle">
+                <a href="{{ page.extra.article_link | safe }}">
+                    {{ page.title }}
+                </a>
+                <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+
+        {# Sécurisation des droits d’accès #}
+        <div class="flex flex-col self-center m-16">
+            <h2 class="text-cyberblue">Sécurisation des droits d’accès</h2>
+            {% for page in section.pages %}
+
+            {% if page.extra.category == 2 %}
+            <div class="flex flex-col">
+                <a href="{{ page.extra.article_link | safe }}">
+                    {{ page.title }}
+                </a>
+                <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+
+        {# RGPD et protection des données personnelles #}
+        <div class="flex flex-col self-center m-16">
+            <h2 class="text-cyberblue">RGPD et protection des données personnelles</h2>
+            {% for page in section.pages %}
+
+            {% if page.extra.category == 3 %}
+            <div class="flex flex-col">
+                <a href="{{ page.extra.article_link | safe }}">
+                    {{ page.title }}
+                </a>
+                <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
