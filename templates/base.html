@@ -4,7 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{% block title %} Quentindeve {% endblock %}</title>
+    <title>
+        {% block title %} Quentindeve {% endblock %}
+    </title>
+
     {% block css %}
     <link rel="stylesheet" href="/css/app.css" />
     {% endblock %}
@@ -12,9 +15,11 @@
     {% block js %} {% endblock %}
 </head>
 
-<body class="bg-slate-900 text-[#fcee0a]">
+<body class="bg-slate-900 text-cyberyellow">
     {% block header %} {% include "includes/header.html" %} {% endblock %}
-    {% block body %} {% endblock %}
+    <div class="pt-16">
+        {% block body %} {% endblock %}
+    </div>
     {% block footer %} {% include "includes/footer.html" %} {% endblock %}
 </body>
 
