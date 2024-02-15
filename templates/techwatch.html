@@ -19,7 +19,7 @@ Quentindeve / Veille Technologique
 
             {% if page.extra.category == 1 %}
             <div class="flex flex-col align-middle mb-2">
-                <a href="{{ page.extra.article_link | safe }}">
+                <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
                 <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
@@ -36,7 +36,7 @@ Quentindeve / Veille Technologique
 
             {% if page.extra.category == 2 %}
             <div class="flex flex-col mb-2">
-                <a href="{{ page.extra.article_link | safe }}">
+                <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
                 <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
@@ -53,7 +53,7 @@ Quentindeve / Veille Technologique
 
             {% if page.extra.category == 3 %}
             <div class="flex flex-col mb-2">
-                <a href="{{ page.extra.article_link | safe }}">
+                <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
                 <span class="italic text-gray-400 ml-2">{{ page.date | date(format="%d/%m/%Y")}}</span>
