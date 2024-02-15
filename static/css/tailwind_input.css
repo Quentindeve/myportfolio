@@ -24,14 +24,18 @@
     }
 
     .text-container {
-        @apply mx-80 text-lg mb-4;
+        @apply mx-96 text-lg mb-4;
     }
 
     hr {
-        @apply my-8 mx-80 bg-cyberyellow h-px border-0;
+        @apply my-8 mx-96 bg-cyberyellow h-px border-0;
     }
 
     a {
-        @apply text-white font-bold hover:text-cyberblue transition ease-in-out duration-300;
+        @apply text-white font-bold hover:text-cyberyellow transition ease-in-out duration-300;
+    }
+
+    body {
+        @apply bg-slate-900 text-cyberblue;
     }
 }
