@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+Quentindeve / CV
+{% endblock %}
+
+{% block body %}
+
+{% set studies = section.extra.studies %}
+{% set experiences = section.extra.experiences %}
+{% set skills = section.extra.skills %}
+
+<div class="m-12 bg-gray-500">
+    <div class="flex flex-row bg-red-500 p-4" id="header-container">
+        <img src="images/header-lucy.png" alt="placeholder" class="w-1/6 h-auto" />
+        <div class="flex flex-col justify-start">
+            <h1 class="mx-10 self-start">{{ section.extra.name }} {{ section.extra.surname }}</h1>
+            <h2 class="mx-10 self-start">{{ section.extra.selling_point }}</h2>
+        </div>
+    </div>
+    <div class="flex flex-row p-4" id="bottom-container">
+        <div class="flex flex-col bg-yellow-500 w-fit" id="infos">
+            <span id="phone">{{ section.extra.phone }}</span>
+            <div class="flex flex-row">
+                Mail:
+                <a href="mailto:{{ section.extra.email }}" id="email" class="ml-2">{{ section.extra.email
+                    }}</a>
+            </div>
+            <div class="flex flex-row">
+                Portfolio: <a href="{{ section.extra.link }}" id="link" class="ml-2">{{ section.extra.link
+                    }}</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col" id="main-container">
+            <div class="flex flex-col" id="studies">
+                <h2>Etudes</h2>
+                {% for study in studies %}
+                <div class="flex flex-col">
+                    <h3 class="mx-10">{{ study.degree }}</h3>
+                    <span class="mx-10">{{ study.year }}</span>
+                    <span class="mx-10">{{ study.school_name }}</span>
+                </div>
+                {% endfor %}
+
+                <h2>Expériences</h2>
+                <div class="flex flex-col">
+                    {% for experience in experiences %}
+
+                    <h3 class="mx-10">{{ experience.title }}</h3>
+                    <span class="mx-10">{{ experience.duration }}</span>
+                    <span class="mx-10">{{ experience.description }}</span>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
