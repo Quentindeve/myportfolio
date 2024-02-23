@@ -15,9 +15,9 @@
     {% block js %} {% endblock %}
 </head>
 
-<body>
+<body class="flex flex-col h-screen justify-between">
     {% block header %} {% include "includes/header.html" %} {% endblock %}
-    <div class="pt-16">
+    <div class="pt-16 flex flex-col justify-center">
         {% block body %} {% endblock %}
     </div>
     {% block footer %} {% include "includes/footer.html" %} {% endblock %}
