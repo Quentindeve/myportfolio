@@ -11,10 +11,22 @@ Quentindeve / Projets / {{ page.title }}
     <div class="flex flex-col">
         <div class="text-container">{{ page.content | safe }}</div>
 
+        {% if page.extra.github_link %}
         <a href="{{ page.extra.github_link | safe }}" target="_blank"
             class="self-center border-solid border-4 p-2 rounded-lg hover:border-cyberblue ">Accéder
             au dépôt
-            GitHub</a>
+            GitHub
+        </a>
+
+        {% elif page.extra.file %}
+        <a href="{{ file | safe }}" target="_blank"
+            class="self-center border-solid border-4 p-2 rounded-lg hover:border-cyberblue ">
+            Télécharger le rendu
+        </a>
+        {% endfor %}
+
+        {% endif %}
+
     </div>
 </div>
 {% endblock %}
