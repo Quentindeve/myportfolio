@@ -4,7 +4,7 @@
 
 @layer base {
     * {
-        @apply leading-8;
+        @apply leading-8 font-semibold;
     }
 
     h1 {
@@ -24,7 +24,15 @@
     }
 
     .text-container {
-        @apply w-1/3 text-lg mb-4 self-center;
+        @apply w-1/2 text-lg mb-4 self-center;
+    }
+
+    .techwatch-block {
+        @apply flex flex-col mb-2;
+    }
+
+    .header-item {
+        @apply self-center mx-4;
     }
 
     hr {
@@ -41,6 +49,10 @@
 
     .interactive {
         @apply hover:fill-cyberblue transition ease-in-out duration-300;
+    }
+
+    .swiper-image {
+        @apply w-1/6 h-auto bg-white m-0 p-0;
     }
 
     footer {
