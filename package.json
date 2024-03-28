@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "watch": "npx tailwindcss -i ./static/css/tailwind_input.css -o ./static/css/app.css --watch & npx webpack --watch"
+        "build": "npx tailwindcss -i ./static/css/tailwind_input.css -o ./static/css/app.css && npx webpack && zola build"
     },
     "repository": {
         "type": "git",
