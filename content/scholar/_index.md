@@ -1,7 +1,7 @@
 +++
 title = "Projets Scolaires"
 sort_by = "date"
-template = "scholar.html"
+template = "projects.html"
 page_template = "projects-page.html"
 
 [extra]

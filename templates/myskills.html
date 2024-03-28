@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Quentindeve / Mes compétences
+{% endblock %}
+
+{% block js %}
+<script src="/js/carousel.min.js" defer></script>
+{% endblock %}
+
+{% block body %}
+
+{% set count = 0 %}
+
+
+<h1>{{ section.title | safe }}</h1>
+
+<div class="text-container">
+    <div class="mb-8">
+        {{ section.content | safe }}
+    </div>
+
+    {% for page in section.pages %}
+
+    <div class="flex flex-row justify-between">
+        {% set title_words = page.title | split(pat=" ") %}
+
+        <div class="flex flex-col my-auto">
+            {% for word in title_words %}
+            <h2 class="my-2">{{ word }}</h2>
+            {% endfor %}
+        </div>
+
+        <div class="swiper-container w-1/2 h-auto overflow-hidden bg-white p-4 my-8 border rounded-lg m-auto">
+            <div class="swiper-wrapper">
+                {% for skill in page.extra.skills %}
+                <a href="{{ skill.href | safe }}" class="swiper-slide !z-0">
+                    <img src="/images/skills/{{ skill.image }}" class="swiper-image m-auto select-none w-auto h-24" />
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <hr class="mx-auto my-8" />
+
+    {% endfor %}
+</div>
+
+{% endblock %}

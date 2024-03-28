@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="Portfolio de Quentindeve, jeune développeur Back-end et Systèmes, actuellement étudiant en BTS SIO Spécialité SLAM (Solutions Logicielles et Applications Métiers)." />
     <title>
-        {% block title %} Quentindeve {% endblock %}
+        {% block title %} Quentindeve
+        {% if page.title %}
+        / {{ page.title }}
+        {% endif %}
+        {% endblock %}
     </title>
 
     {% block css %}
@@ -15,9 +21,9 @@
     {% block js %} {% endblock %}
 </head>
 
-<body class="flex flex-col h-screen justify-between">
+<body class="flex h-screen flex-col justify-between">
     {% block header %} {% include "includes/header.html" %} {% endblock %}
-    <div class="pt-16 flex flex-col justify-center">
+    <div class="mb-8 flex flex-col justify-center pt-16">
         {% block body %} {% endblock %}
     </div>
     {% block footer %} {% include "includes/footer.html" %} {% endblock %}
