@@ -15,12 +15,12 @@ Quentindeve / Veille Technologique
 
     <div class="flex flex-row self-center mx-32 my-8">
         {# Frameworks #}
-        <div class="flex flex-col flex-wrap w-fit">
+        <div class="flex flex-col flex-wrap w-fit mx-8">
             <h2 class="text-cyberblue">Les outils de développement</h2>
             {% for page in section.pages %}
 
             {% if page.extra.category == 1 %}
-            <div class="techwatch-block">
+            <div class="techwatch-block max-w-md">
                 <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
@@ -32,12 +32,12 @@ Quentindeve / Veille Technologique
         </div>
 
         {# Sécurisation des droits d’accès #}
-        <div class="flex flex-col w-fit">
-            <h2 class="text-cyberblue">Sécurisation des droits d’accès</h2>
+        <div class="flex flex-col w-fit mx-8">
+            <h2 class="text-cyberblue">Sécurisation des droits d'accès</h2>
             {% for page in section.pages %}
 
             {% if page.extra.category == 2 %}
-            <div class="techwatch-block">
+            <div class="techwatch-block max-w-md">
                 <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
@@ -49,12 +49,12 @@ Quentindeve / Veille Technologique
         </div>
 
         {# RGPD et protection des données personnelles #}
-        <div class="flex flex-col w-fit">
+        <div class="flex flex-col w-fit mx-8">
             <h2 class="text-cyberblue">RGPD et protection des données personnelles</h2>
             {% for page in section.pages %}
 
             {% if page.extra.category == 3 %}
-            <div class="techwatch-block">
+            <div class="techwatch-block max-w-md">
                 <a target="_blank" href="{{ page.extra.article_link | safe }}">
                     {{ page.title }}
                 </a>
