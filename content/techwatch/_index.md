@@ -16,6 +16,4 @@ Afin de réaliser ma veille technologique, j'ai choisi de me concentrer sur les 
 
 - **Les outils de développement**, incluant la sécurisation des applications, leur maintenance évolutive ainsi que leur interopérabilité.
 
-- **La sécurisation des droits d’accès**, qui s'intéresse au [chiffrement](https://chiffrer.info) des données, la lutte contre la fuite d'informations de connexion, la sécurité des applications et les blockchains.
-
-- **Le RGPD et la protection des données personnelles**, qui s'intéresse à la conformité des applications à la législation européenne et aux fuites de données.
+- **Les bonnes pratiques de cybersécurité**, qui s'intéresse à la lutte contre les intrusions dans les systèmes d'information et la lutte contre les failles applicatives.
