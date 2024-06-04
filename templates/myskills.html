@@ -35,14 +35,15 @@ Quentindeve / Mes compétences
             <div class="swiper-wrapper">
                 {% for skill in page.extra.skills %}
                 <a href="{{ skill.href | safe }}" class="swiper-slide !z-0">
-                    <img src="/images/skills/{{ skill.image }}" class="swiper-image m-auto select-none w-auto h-24" />
+                    <img src="/images/skills/{{ skill.image }}" class="swiper-image m-auto select-none w-auto h-24" alt="{{
+                        skill.image }}" />
                 </a>
                 {% endfor %}
             </div>
         </div>
     </div>
 
-    <hr class="mx-auto my-8" />
+    <hr class=" mx-auto my-8" />
 
     {% endfor %}
 </div>
